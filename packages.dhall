@@ -116,6 +116,14 @@ let upstream =
 
 let overrides = {=}
 
-let additions = {=}
+let additions =
+  { tree =
+       mkPackage
+         [ "free"
+         , "lists"
+         ]
+         "https://github.com/dmbfm/purescript-tree.git"
+         "v1.3.2",
+}
 
 in  upstream // overrides // additions
